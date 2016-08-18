@@ -1,0 +1,176 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>浅析HTML5中的无障碍标签及用处</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	
+	
+	<body>
+		<div class="reveal">
+			<img width="185" height="100" style="position: fixed; bottom: 10px; left: 10px;"  src="pic/SIAA_logo.png" alt="研究会 logo" data-background-transition="zoom">
+		
+			<div class="slides">
+				
+				<section>		
+					<h1>HTML5中的无障碍标签及用处</h1>
+					<p>张昆 @<a href="http://siaa.org.cn/">SIAA</a>  </p>
+					<p><a href="mailto:zhangkun@siaa.org.cn">zhangkun@siaa.org.cn</a><p>
+				</section> <!-- 封面 -->
+				
+				
+				<section id="fragments">
+					<section>
+						<h2>信息无障碍 -- Accessibility</h2><img src="pic/accessibility.gif" alt="logo 1">
+						<p>任何人在任何情况下都能平等的、便利、无障碍地获取信息、利用信息。</p>
+						<p class="fragment">
+						信息的无障碍 -- 不是一种行为或状态，而是指，进入、访问信息的自由选择和使用权利。</p>
+					</section>
+					
+					<section>
+						<h2>为什么我们应该考虑信息无障碍</h2>
+						<p>在中国，有超过8000万的残障人士；</p>
+						<img src="pic/accessibility.png" alt="logo 2">
+					</section>
+
+					<section>
+						<p>弱势群体，以及受制于环境的用户：</p>
+						<ul>
+							<li>2.1亿老龄化人口；</li>
+							<li>5%-10%的读写障碍人群；</li>
+							<li>第二语言人群；</li>
+							<li>低教育程度。</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>信息鸿沟，以及种类繁多的互联网产品：</p>
+						<ul>
+							<li>9亿活跃移动设备；</li>
+							<li>网络不通达；</li>
+							<li>对互联网不熟悉。</li>
+						</ul>
+					</section>					
+				</section> <!-- Slides 1 -->
+				
+				<section>
+					<h2>注意事项</h2>
+					<ul>
+						<li>读屏软件</li>
+						<li>屏幕放大器</li>
+						<li>语音控制</li>
+						<li>键盘用户</li>
+						<li>点击目标较小</li>
+						<li>移动端 - 大手指，小按键</li>
+						<li>读写障碍</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>表单</h2>
+						
+						<pre>
+						<code>
+<form name="form1" method="post" action="">
+  <p>
+    <label for="name">姓名 <span class="star">*</span></label>
+    <input type="text" name="name" id="name" required>
+  </p>
+  <p>
+    <input type="checkbox" name="tos" id="tos" required>
+    <label for="tos" class="inline"><span class="star">*</span>我同意</label>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="测试">
+  </p>
+</form>					
+						</code>
+						</pre>	
+					</section>
+					<section>
+					<form name="form1" method="post" action="">
+  <p>
+    <label for="name">姓名 <span class="star">*</span></label>
+    <input type="text" name="name" id="name" required>
+  </p>
+  <p>
+    <input type="checkbox" name="tos" id="tos" required>
+    <label for="tos" class="inline"><span class="star">*</span>我同意</label>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="测试">
+  </p>
+</form>
+					
+					</section>
+					
+					</section>
+					
+				</section>
+				
+				
+				<section>
+					<h2>表单控件使用label元素</h2>
+					<pre>
+					<code>
+<label for="fname">姓名 *</label>
+<input required type="text" name="fname" id="fname">					
+					</code>
+					</pre>
+					<p>
+					<label for="fname">姓名 *</label>
+					<input required type="text" name="fname" id="fname">		
+					</p>
+				</section> <!-- XXXX -->
+				
+				
+				
+				
+				<section>Slide 1</section>
+				<section>Slide 2</section>
+			
+			
+			
+			
+			
+			
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
