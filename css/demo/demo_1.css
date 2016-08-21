@@ -1,0 +1,15 @@
+﻿
+p:focus,input:focus {
+    outline: 2px solid #ff0000;
+	}
+
+a:hover,input:hover {
+	outline: 2px solid #ff0000;
+}
+a:focus,input:focus {
+    outline: 2px solid #ff0000;
+}
+
+img:focus,input:focus {
+    outline: 6px solid #ff0000;
+}

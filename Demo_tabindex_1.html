@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="Zh_CN">
+<head>
+
+<title></title>
+</head>
+
+<body>
+
+	<div id="tabindex">
+		<h3>重点：tabindex、aria-labelledby、caption、summary</h3>
+		<form action="#" method="post">
+			<table summary="2017年NBA赛季最佳球员，取前两名">
+			<caption>赛季最佳</caption>
+				 <tr>
+				   <th></th>
+				   <th id="1st">第一名</th>
+				   <th id="2nd">第二名</th>
+				 </tr>
+				 <tr>
+				  <th id="dfw">得分王</th>
+				  <td><input type="text" size="30" aria-labelledby="dfw 1st" tabindex="1"></td>
+				  <td><input type="text" size="30" aria-labelledby="dfw 2nd" tabindex="5"></td>
+				 </tr>
+				 <tr>
+				  <th id="lbw">篮板王</th>
+				  <td><input type="text" size="30" aria-labelledby="lbw 1st" tabindex="2"></td>
+				  <td><input type="text" size="30" aria-labelledby="lbw 2nd" tabindex="6"></td>
+				 </tr>
+				 <tr>
+				  <th id="zgw">助攻王</th>
+				  <td><input type="text" size="30" aria-labelledby="zgw 1st" tabindex="3"></td>
+				  <td><input type="text" size="30" aria-labelledby="zgw 2nd" tabindex="7"></td>
+				 </tr>
+				 <tr>
+				  <th id="gmw">盖帽王</th>
+				  <td><input type="text" size="30" aria-labelledby="gmw 1st" tabindex="4"></td>
+				  <td><input type="text" size="30" aria-labelledby="gmw 2nd" tabindex="8"></td>
+				 </tr>
+			</table>
+		</form>     
+	</div>
+	
+<br/>					
+<hr/>
+
+	
+
+
+
+
+
+
+
+ 
+</div>
+
+	
+</body>
+</html>

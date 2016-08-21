@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<meta name="viewport" content=
+  "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="description" content="H5中的无障碍标签及用处">
+		<meta name="author" content="张昆">
 		<title>浅析HTML5中的无障碍标签及用处</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
@@ -29,82 +31,284 @@
 		
 			<div class="slides">
 				
-				<section>		
-					<h1>HTML5中的无障碍标签及用处</h1>
+				<section data-transition="convex">		
+					<h2>HTML5中的无障碍标签及用处</h2>
 					<p>张昆 @<a href="http://siaa.org.cn/">SIAA</a>  </p>
 					<p><a href="mailto:zhangkun@siaa.org.cn">zhangkun@siaa.org.cn</a><p>
 				</section> <!-- 封面 -->
 				
 				
-				<section id="fragments">
+				<section  data-transition="convex" id="fragments">
 					<section>
-						<h2>信息无障碍 -- Accessibility</h2><img src="pic/accessibility.gif" alt="logo 1">
+						<h3>信息无障碍 -- Accessibility</h3><img src="pic/accessibility.gif" alt="logo 1">
 						<p>任何人在任何情况下都能平等的、便利、无障碍地获取信息、利用信息。</p>
-						<p class="fragment">
-						信息的无障碍 -- 不是一种行为或状态，而是指，进入、访问信息的自由选择和使用权利。</p>
+						<p>
+							<span data-fragment-index="1" class="fragment" >关键词：</span>
+							<span data-fragment-index="2" class="fragment">可及性 - </span> 
+							<span data-fragment-index="3" class="fragment">通用性 - </span> 
+							<span data-fragment-index="4" class="fragment">易用性 </span>
+						</p>
 					</section>
 					
-					<section>
-						<h2>为什么我们应该考虑信息无障碍</h2>
-						<p>在中国，有超过8000万的残障人士；</p>
-						<img src="pic/accessibility.png" alt="logo 2">
-					</section>
-
-					<section>
-						<p>弱势群体，以及受制于环境的用户：</p>
+					<section data-transition="convex">
+						<h3>Web 界面可能面对：</h3>
 						<ul>
-							<li>2.1亿老龄化人口；</li>
-							<li>5%-10%的读写障碍人群；</li>
-							<li>第二语言人群；</li>
-							<li>低教育程度。</li>
+							<li>视障人士</li>
+							<li>听障人士</li>
+							<li>老年人</li>
+							<li>读写障碍人士</li>
+							<li>受环境影响，不能正常使用信息的人士</li>
 						</ul>
 					</section>
 
-					<section>
-						<p>信息鸿沟，以及种类繁多的互联网产品：</p>
+					<section data-transition="convex">
+						<h3>是否考虑如下的因素：</h3>
 						<ul>
-							<li>9亿活跃移动设备；</li>
-							<li>网络不通达；</li>
-							<li>对互联网不熟悉。</li>
+							<li>读屏软件</li>
+							<li>屏幕放大器</li>
+							<li>语音控制</li>
+							<li>键盘用户</li>
+							<li>点击目标较小</li>
+							<li>小按键</li>
 						</ul>
-					</section>					
+					</section>
+									
 				</section> <!-- Slides 1 -->
 				
-				<section>
-					<h2>注意事项</h2>
-					<ul>
-						<li>读屏软件</li>
-						<li>屏幕放大器</li>
-						<li>语音控制</li>
-						<li>键盘用户</li>
-						<li>点击目标较小</li>
-						<li>移动端 - 大手指，小按键</li>
-						<li>读写障碍</li>
-					</ul>
+				<section data-transition="convex">
+					<section data-transition="convex">
+						<h3>了解</h3>
+						<ul>
+							<li><span data-fragment-index="1" class="fragment highlight-blue ">WCAG </span>（Web Content Accessibility Guidelines）2.0</li>
+							<li>Accessible Rich Internet Applications (<span data-fragment-index="2" class="fragment highlight-blue">WAI-ARIA</span>) 1.0</li>
+						</ul>
+					</section>
+					
+					<section data-transition="convex">
+						<h2>W3C 标准</h2>
+						<p><a href="http://www.w3.org/TR/WCAG20/">WCAG （Web Content Accessibility Guidelines）2.0</a></p>
+						<p>Web内容无障碍指南(WCAG)2.0</a></p>
+						<ul>
+							<li>W3C推荐标准，同时也是ISO标准;</li>
+							<li>广泛运用在Web内容、应用与及网站运营;</li>
+							<li>前瞻性的设计思路;</li>
+							<li>可运用在软件、移动设备等；</li>
+						</ul>
+					</section>
+		
+					<section data-transition="convex">
+						<p>WCAG 2.0 支持文档</p>
+						<ul>
+							<li><a href="https://www.w3.org/Translations/WCAG20-zh/">Web内容无障碍指南(WCAG)2.0 -- 中文授权翻译</a></li>
+							<li><a href="http://www.w3.org/WAI/WCAG20/quickref/">如何符合WCAG 2.0 （How to Meet WCAG 2.0）</a></li>
+							<li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/">理解WCAG 2.0 （Understanding WCAG 2.0）</a></li>
+							<li><a href="http://www.w3.org/TR/WCAG20-TECHS/">WCAG 2.0 技巧 （Techniques for WCAG 2.0）</a></li>
+						</ul>
+					</section>
+					
+					<section data-transition="convex">
+						<h2>W3C 标准</h2>
+						<p><a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)1.0</a></p>
+						<p>可及性富互联网应用 1.0，让动态Web内容更无障碍</p>
+						<ul>
+							<li>定义了可以描述widget和网页结构的角色</li>
+							<li>拖拽类的资源、目标的属性界定</li>
+							<li>为Web对象和事件提供键盘导航</li>
+						</ul>
+					</section>
+					
+					<section data-transition="convex">
+						<p>WAI-ARIA 1.0 支持文档</p>
+						<ul>
+							<li><a href="http://www.w3.org/TR/wai-aria-implementation/">用户代理实施向导 User Agent Implementation Guide</a></li>
+							<li><a href="http://www.w3.org/tr/wai-aria-practices/">WAI-ARIA 创作实践 WAI-ARIA 1.0 authoring practices</a></li>
+							<li><a href="http://www.w3.org/TR/wai-aria-primer/">WAI-ARIA 初级读本 WAI-ARIA Primer</a></li>
+							<li><a href="http://www.w3.org/TR/wai-aria-roadmap/">WAI-ARIA 发展计划 WAI-ARIA Roadmap</a></li>
+						</ul>
+					</section>					
 				</section>
 				
 				<section>
+					<h3>WCAG 的四个基本原则</h3>
+					<ul>
+						<li>可感知性</li>
+						<li>可操作性</li>
+						<li>可理解性</li>
+						<li>鲁棒性</li>
+					</ul>
+				</section>
+				
+				
+				<section>
 					<section>
-						<h2>表单</h2>
+						<h3>可感知性</h3>
+						<p>--- 信息和用户界面组件必须以可感知的方式呈现给用户</p>
+						<ul>
+							<li>替代文本</li>
+							<li>时基媒体</li>
+							<li>适应性</li>
+						</ul>
+					
+					</section>
+					
+					<section>
+						<h3>替代文本</h3>
+						<ul>
+							<li>非文本内容可通过简短文字说明:<br>
+							<code>aria-label</code>、<code>alt</code>、<code>aria-labelledby</code>为元素添加替代文本
+							</li>
+							<pre><code class="html">
+<img src="sample/sample_1_1.jpg" alt="天安门">	
+							</code>
+							</pre>
+							<li>非文本内容需要较长的文字描述：<br>
+							<code>aria-describedby</code>、<code>longdesc</code>为元素添加较长文字描述
+							</li>
+							<pre>
+							<code class="html">
+<form>
+  <label for="name">姓名：</label>
+  <input name="" type="text" id="fname" aria-describedby="int2">
+  <p id="int2">此处请填写您的姓名。 </p>
+</form>
+							</code>
+							</pre>
+						</ul>
+					</section>
+					
+					<section>
 						
+						<ul>
+							<li>参考 <a href="Demo_alt.html"><code>alt</code> 案例</a>，了解图像的替代文本</li>
+							<li>参考 <a href="Demo_longdesc_1.html"><code>longdesc</code> 案例</a>，了解图像的长描述</li>
+							<li>参考 <a href="Demo_aria_describedby.html"><code>aria-describedby</code> 案例</a>，了解为控件添加长描述</li>
+						</ul>
+						<p>
+						<span class="k">* 注意：</span>如果非文本内容一个装饰性内容：设置<code>alt</code>为空 或者 在CSS中设置装饰图。
+						</p>						
+					</section>	
+				</section>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<section data-transition="convex">
+					<section data-transition="convex">
+						<h3>键盘导航</h3>
+						<ul>
+							<li>tabindex</li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</section>
+					
+					<section data-transition="convex">
+						<h3>tabindex 属性</h3>
+						<ul>
+							<li><code>tabindex</code> >= 1<br>定义元素的tab键访问顺序</li>
+							<li><code>tabindex = "0"</code><br>为某些元素添加焦点，例如：<code>div</code>、 <code>span</code>、 <code>p</code></li>
+							<li><code>tabindex = "-1"</code><br>元素由代码获取到焦点，但不在 tab 键序列中</li>
+						</ul>
 						<pre>
-						<code>
-<form name="form1" method="post" action="">
+						<code class="html">
+<p tabindex = "2">tabindex = "2"</p>
+<p tabindex = "1">tabindex = "1"</p>
+<p tabindex = "0">tabindex = "0"</p>
+<p tabindex = "-1">tabindex = "-1"</p> 
+						</code>
+						</pre>	
+					</section>
+					
+					<section data-transition="convex">
+						<p>注意：使用<code>tabindex</code>，可能会破坏正常的导航顺序，或者导致读屏软件跳过元素。</p>
+						<ul>
+							<li>参考 <a href="Demo_tabindex_1.html"><code>tabindex</code> 案例一</a>，了解导航顺序</li>
+							<li>参考 <a href="Demo_tabindex_2.html"><code>tabindex</code> 案例二</a>，了解导航焦点</li>
+						</ul>
+					</section><!-- slides for tabindex -->
+					
+					<section>
+						<h3>accesskey</h3>
+						<p>可以使用快捷键（Alt + 字母），快速访问指定URL</p>
+						<pre>
+							<code class="html">
+<a href="https://www.w3.org/" accesskey="z">Alt + Z，快速访问此链接</a>
+							</code>
+						</pre>
+						<p>注意：<code>accesskey</code>仅支持edge，IE仅能快速导航到焦点，需配合Enter使用，Chrome和FF不支持</p>
+					</section> <!-- slides for accesskey -->					
+				</section> <!-- slides for 键盘可访问 XXXX -->
+
+				<section>
+					<section>
+						<h3>表单的无障碍问题</h3>
+						<ul>
+							<li>必填域</li>
+							<li>错误信息</li>
+							<li>键盘可访问</li>
+						</ul>	
+					</section>
+					
+					<section>
+						<h3>合并 label 元素与文本标签</h3>
+						<p>减少读屏软件用户的时间</p>
+						<pre>
+							<code>
+<label for="yname">姓名：</label>
+<input type="text" id="yname" name="yname">					
+							</code>
+						</pre>
+					</section> <!-- 合并label元素与文本标签 -->
+					
+					<section>
+						<h2>必填域的处理</h2>					
+						<form name="form1" method="post" action="">
   <p>
-    <label for="name">姓名 <span class="star">*</span></label>
+    <label for="name">姓名</label>
     <input type="text" name="name" id="name" required>
   </p>
   <p>
     <input type="checkbox" name="tos" id="tos" required>
-    <label for="tos" class="inline"><span class="star">*</span>我同意</label>
+    <label for="tos" >我同意</label>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="测试">
+  </p>
+</form>			
+							<pre>
+							<code>
+<form name="form1" method="post" action="">
+  <p>
+    <label for="name">姓名 <span color=red>*</span></label>
+    <input type="text" name="name" id="name" required>
+  </p>
+  <p>
+    <input type="checkbox" name="tos" id="tos" required>
+    <label for="tos" ><span class="star">*</span>我同意</label>
   </p>
   <p>
     <input type="submit" name="submit" id="submit" value="测试">
   </p>
 </form>					
-						</code>
-						</pre>	
-					</section>
+							</code>
+							</pre>						
+					</section><!-- 必填域的处理 -->	
+				
+				</section> <!-- slides 2 -->	
+				
+				
+
+					
+
+					
 					
 					<section>
 						<form name="form1" method="post" action="">
@@ -120,24 +324,10 @@
 							<input type="submit" name="submit" id="submit" value="测试">
 							</p>
 							</form>
-					
 					</section>
 					
 					<section>
-						<label for="text">姓名：</label>
-						<input type="text" name="text" id="text">
-						<br>
-						<label for="email">电子邮件：</label>
-						<input type="email" name="email" id="email">
-						<br>
-						<label for="tel">电话号码：</label>
-						<input type="tel" name="tel" id="tel">
-						<br>
-						<label for="date">出生日期：</label>
-						<input type="date" name="date" id="date" />
-						<br>
-						<label for="zip">邮政编码：</label>
-						<input type="number" pattern="[0-9]*" maxlength="6" min="0" name="zip" id="zip">
+
 					</section>
 					
 				</section>
@@ -145,19 +335,7 @@
 
 				
 				
-				<section>
-					<h2>表单控件使用label元素</h2>
-					<pre>
-					<code>
-<label for="fname">姓名 *</label>
-<input required type="text" name="fname" id="fname">					
-					</code>
-					</pre>
-					<p>
-					<label for="fname">姓名 *</label>
-					<input required type="text" name="fname" id="fname">		
-					</p>
-				</section> <!-- XXXX -->
+
 				
 				
 				
