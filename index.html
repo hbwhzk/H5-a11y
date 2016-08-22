@@ -80,7 +80,7 @@
 						<h3>了解</h3>
 						<ul>
 							<li><span data-fragment-index="1" class="fragment highlight-blue ">WCAG </span>（Web Content Accessibility Guidelines）2.0</li>
-							<li>Accessible Rich Internet Applications (<span data-fragment-index="2" class="fragment highlight-blue">WAI-ARIA</span>) 1.0</li>
+							<li><span data-fragment-index="2" class="fragment highlight-blue">WAI-ARIA</span>（Accessible Rich Internet Applications） 1.0</li>
 						</ul>
 					</section>
 					
@@ -177,25 +177,46 @@
 					
 					<section data-transition="convex">
 						<ul>
-							<li>参考 <a href="Demo_alt.html"><code>alt</code> 案例</a>，了解图像的替代文本</li>
-							<li>参考 <a href="Demo_longdesc_1.html"><code>longdesc</code> 案例</a>，了解图像的长描述</li>
-							<li>参考 <a href="Demo_aria_describedby.html"><code>aria-describedby</code> 案例</a>，了解为控件添加长描述</li>
+							<li>参考 <a href="Demo_alt.html">alt 案例</a>，了解图像的替代文本</li>
+							<li>参考 <a href="Demo_longdesc_1.html">longdesc 案例</a>，了解图像的长描述</li>
+							<li>参考 <a href="Demo_aria_describedby.html">aria-describedby 案例</a>，了解为控件添加长描述</li>
 						</ul>
 						<p>
-						<span class="k">* 注意：</span>如果非文本内容一个装饰性内容：设置<code>alt</code>为空 或者 在CSS中设置装饰图。
+						<span class="k">* 注意：</span>如果非文本内容一个装饰性内容 - 设置<code>alt</code>为空 或者 在CSS中设置装饰图。
 						</p>						
 					</section>	
 					
 					<section data-transition="convex">
 						<h3>适应性</h3>
 						<ul>
-							<li>使用h1 - h6定义标题头</li>
-							<li>使用ol、ul、dl定义列表或者组织链接</li>
-							<li>使用caption和summary为数据表格定义标题和给出详细介绍</li>
-							<li>使用role定义网页区域</li>
-							<li>使用id、header关联数据表格中的数据单元</li>
+							<li>使用<code>h1</code> - <code>h6</code>定义标题头</li>
+							<li>使用<code>ol</code>、<code>ul</code>、<code>dl</code>定义列表或者组织链接</li>
+							<li>使用<code>caption</code> 和 <code>summary</code> 为数据表格定义标题和给出介绍</li>
+							<li>使用<code>role</code> 定义网页区域</li>
+							<pre>
+							<code class="html">
+<div id="header" role="banner">1</div>
+<div id="sitelookup" role="search">2</div>
+<div id="nav" role="navigation">3</div>
+<div id="content" role="main">4</div>
+<div id="rightsideadvert" role="complementary">5</div>
+<div id="footer" role="contentinfo">6</div>
+<div id="form" role="form">7</div>
+							</code>
+							</pre>
+							<li><code>使用id</code>、<code>header</code>关联数据表格中的数据单元</li>
 						</ul>
 					</section>	
+					
+					<section data-transition="convex">
+						<ol>
+							<li>参考 <a href="Demo_h.html">h1 - h6案例</a>，了解读屏工具的使用结果</li>
+							<li>参考 <a href="Demo_role_1.html">role 案例</a>，了解网页区域定义</li>
+						</ol>
+					
+					
+					
+					</section>
 				</section> <!-- Slides 4 -->
 				
 				<section data-transition="convex">

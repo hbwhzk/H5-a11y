@@ -13,3 +13,32 @@ a:focus,input:focus {
 img:focus,input:focus {
     outline: 6px solid #ff0000;
 }
+#test td, #test th 
+  {
+  font-size:1em;
+  border:1px solid #b3b3b3;
+  padding:3px 7px 2px 7px;
+  }
+
+#test th 
+  {
+  font-size:1.1em;
+  text-align:left;
+  padding-top:5px;
+  padding-bottom:4px;
+  background-color:#A7C942;
+  color:#ffffff;
+  }
+
+#test tr.alt td 
+  {
+  color:#000000;
+  background-color:#EAF2D3;
+  }
+  
+#test
+  {
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  width:50%;
+  border-collapse:collapse;
+  }
