@@ -44,9 +44,9 @@
 						<p>任何人在任何情况下都能平等的、便利、无障碍地获取信息、利用信息。</p>
 						<p>
 							<span data-fragment-index="1" class="fragment" >关键词：</span>
-							<span data-fragment-index="2" class="fragment">可及性 - </span> 
-							<span data-fragment-index="3" class="fragment">通用性 - </span> 
-							<span data-fragment-index="4" class="fragment">易用性 </span>
+							<span data-fragment-index="2" class="fragment k">可及性 - </span> 
+							<span data-fragment-index="3" class="fragment k">通用性 - </span> 
+							<span data-fragment-index="4" class="fragment k">易用性 </span>
 						</p>
 					</section>
 					
@@ -126,9 +126,9 @@
 							<li><a href="http://www.w3.org/TR/wai-aria-roadmap/">WAI-ARIA 发展计划 WAI-ARIA Roadmap</a></li>
 						</ul>
 					</section>					
-				</section>
+				</section> <!-- Slides 2 -->
 				
-				<section>
+				<section data-transition="convex">
 					<h3>WCAG 的四个基本原则</h3>
 					<ul>
 						<li>可感知性</li>
@@ -136,22 +136,21 @@
 						<li>可理解性</li>
 						<li>鲁棒性</li>
 					</ul>
-				</section>
+				</section> <!-- Slides 3 -->
 				
 				
-				<section>
-					<section>
+				<section data-transition="convex">
+					<section data-transition="convex">
 						<h3>可感知性</h3>
 						<p>--- 信息和用户界面组件必须以可感知的方式呈现给用户</p>
 						<ul>
 							<li>替代文本</li>
-							<li>时基媒体</li>
 							<li>适应性</li>
 						</ul>
 					
 					</section>
 					
-					<section>
+					<section data-transition="convex">
 						<h3>替代文本</h3>
 						<ul>
 							<li>非文本内容可通过简短文字说明:<br>
@@ -176,8 +175,7 @@
 						</ul>
 					</section>
 					
-					<section>
-						
+					<section data-transition="convex">
 						<ul>
 							<li>参考 <a href="Demo_alt.html"><code>alt</code> 案例</a>，了解图像的替代文本</li>
 							<li>参考 <a href="Demo_longdesc_1.html"><code>longdesc</code> 案例</a>，了解图像的长描述</li>
@@ -187,8 +185,117 @@
 						<span class="k">* 注意：</span>如果非文本内容一个装饰性内容：设置<code>alt</code>为空 或者 在CSS中设置装饰图。
 						</p>						
 					</section>	
-				</section>
+					
+					<section data-transition="convex">
+						<h3>适应性</h3>
+						<ul>
+							<li>使用h1 - h6定义标题头</li>
+							<li>使用ol、ul、dl定义列表或者组织链接</li>
+							<li>使用caption和summary为数据表格定义标题和给出详细介绍</li>
+							<li>使用role定义网页区域</li>
+							<li>使用id、header关联数据表格中的数据单元</li>
+						</ul>
+					</section>	
+				</section> <!-- Slides 4 -->
 				
+				<section data-transition="convex">
+					<section>
+						<h3>可操作性</h3>
+						<p>--- 用户界面组件和导航必须可操作</p>
+						<ul>
+							<li>键盘可访问</li>
+							<li>可导航性</li>
+						</ul>
+					</section>
+					
+					<section data-transition="convex">
+						<h3>键盘可访问</h3>
+						<ul>
+							<li>内容和功能可被键盘操作</li>
+							<li>能够通过键盘的tab键导航整个页面</li>
+							<li>键盘焦点不会陷入页面中的某个组件或插件</li>
+						</ul>
+					</section>
+					
+					<section data-transition="convex">
+						<h3>可导航性</h3>
+						<ul>
+							<li>提供清晰的网页标题，即title</li>
+							<li>能够通过键盘顺序导航</li>
+							<li>标题（H1）和标签（label）具有描述性</li>
+						</ul>
+	
+					</section>
+				</section> <!-- Slides 5 -->
+				
+				<section>
+					<section>
+						<h3>可理解性</h3>
+						<p>--- 信息和用户界面操作必须是可理解的</p>
+						<ul>
+							<li>可读性</li>
+							<li>辅助输入</li>
+						</ul>
+					</section>
+				
+					<section>
+						<h3>可读性</h3>
+						<ul>
+							<li>定义lang属性</li>
+							<li>局部语言，可以被用户代理识别</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3>辅助输入</h3>
+						<ul>
+							<li>定义错误并以文本形式告知</li>
+							<li>为需要用户输入的内容提供标签和说明</li>
+						</ul>
+					</section>
+				</section><!-- Slides 6 -->
+				
+				<section>
+					<section>
+						<h3>鲁棒性</h3>
+						<p>可以被种类繁多的用户代理(包括辅助技术)所解析</p>
+						<ul>
+							<li>兼容</li>
+						</ul>
+					</section>
+				
+					<section>
+						<h3>兼容性</h3>
+						<ul>
+							<li>规范使用HTML</li>
+							<li>确保页面能够被正确解析</li>
+								<ul>
+									<li>标签都有正确的闭合</li>
+									<li><code>id</code>是唯一的</li>
+									<li>确保元素没有冗余的属性</li>
+								</ul>
+							<li>可被辅助技术使用，并被用户代理接受</li>
+								<ul>
+									<li>HTML</li>
+										<ul>
+											<li>参考：<a href="example_3.html">HTML中的标准控件和链接</a></li>
+											<li>使用<code>label</code>元素关联表单控件文本标签</li>
+											<li>表单控件的不能使用<code>label</code>元素，使用<code>title</code>属性</li>
+										</ul>
+									<li>脚本语言或其它语言在HTML中重构的控件</li>
+										<ul>
+											<li>通过<code>aria-labelledby</code>提供控件名称</li>
+										</ul>
+									<li>控件通过编程语言自绘</li>
+										<ul>
+											<li>通过WAI-ARIA的<code>role</code>让控件可被辅助技术使用</li>
+											<li>通过<code>aria-labelledby</code>提供控件名称</li>
+										</ul>		
+								</ul>
+						</ul>
+					</section>
+				
+				</section><!-- Slides 7 -->
 				
 				
 				
@@ -358,6 +465,7 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+				slideNumber: true,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
