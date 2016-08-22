@@ -157,7 +157,7 @@
 							<code>aria-label</code>、<code>alt</code>、<code>aria-labelledby</code>为元素添加替代文本
 							</li>
 							<pre><code class="html">
-<img src="sample/sample_1_1.jpg" alt="天安门">	
+<img aria-label="天安门" alt="" src="sample/pic/sample_1_1.jpg">
 							</code>
 							</pre>
 							<li>非文本内容需要较长的文字描述：<br>
@@ -212,10 +212,7 @@
 						<ol>
 							<li>参考 <a href="Demo_h.html">h1 - h6案例</a>，了解读屏工具的使用结果</li>
 							<li>参考 <a href="Demo_role_1.html">role 案例</a>，了解网页区域定义</li>
-						</ol>
-					
-					
-					
+						</ol>				
 					</section>
 				</section> <!-- Slides 4 -->
 				
@@ -237,17 +234,46 @@
 							<li>键盘焦点不会陷入页面中的某个组件或插件</li>
 						</ul>
 					</section>
+						
+					<section>
+						<ol>
+							<li>html 的标准控件可以被辅助工具访问</li>
+								<ul>
+									<li>参考 <a href="Demo_link.html">链接的几种类型</a></li>
+									<li>参考 <a href="Demo_button.html">按钮的几种类型</a></li>
+								</ul>
+							<li></li>
+						</ol>
+					
+					</section>	
 					
 					<section data-transition="convex">
 						<h3>可导航性</h3>
 						<ul>
-							<li>提供清晰的网页标题，即title</li>
+							<li>提供清晰的网页标题，即<code>title</code></li>
 							<li>能够通过键盘顺序导航</li>
-							<li>标题（H1）和标签（label）具有描述性</li>
+							<pre>
+							<code class="html">
+  <p tabindex = "2">tabindex = "2"</p>
+  <p tabindex = "1">tabindex = "1"</p>
+  <p tabindex = "0">tabindex = "0"</p>
+  <p tabindex = "-1">tabindex = "-1"</p> 
+							</code>
+							</pre>
+							<li>标题<code>h</code>和标签<code>label</code> 具有描述性</li>
 						</ul>
-	
+					</section>
+					
+					<section data-transition="convex">
+						<p>注意：使用<code>tabindex</code>，可能会破坏正常的导航顺序，或者导致读屏软件跳过元素。</p>
+						<ul>
+							<li>参考 <a href="Demo_tabindex_1.html">tabindex 案例一</a>，了解导航顺序</li>
+							<li>参考 <a href="Demo_tabindex_2.html">tabindex 案例二</a>，了解导航焦点</li>
+						</ul>
 					</section>
 				</section> <!-- Slides 5 -->
+				
+
 				
 				<section>
 					<section>
@@ -318,50 +344,8 @@
 				
 				</section><!-- Slides 7 -->
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<section data-transition="convex">
-					<section data-transition="convex">
-						<h3>键盘导航</h3>
-						<ul>
-							<li>tabindex</li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</section>
 					
-					<section data-transition="convex">
-						<h3>tabindex 属性</h3>
-						<ul>
-							<li><code>tabindex</code> >= 1<br>定义元素的tab键访问顺序</li>
-							<li><code>tabindex = "0"</code><br>为某些元素添加焦点，例如：<code>div</code>、 <code>span</code>、 <code>p</code></li>
-							<li><code>tabindex = "-1"</code><br>元素由代码获取到焦点，但不在 tab 键序列中</li>
-						</ul>
-						<pre>
-						<code class="html">
-<p tabindex = "2">tabindex = "2"</p>
-<p tabindex = "1">tabindex = "1"</p>
-<p tabindex = "0">tabindex = "0"</p>
-<p tabindex = "-1">tabindex = "-1"</p> 
-						</code>
-						</pre>	
-					</section>
-					
-					<section data-transition="convex">
-						<p>注意：使用<code>tabindex</code>，可能会破坏正常的导航顺序，或者导致读屏软件跳过元素。</p>
-						<ul>
-							<li>参考 <a href="Demo_tabindex_1.html"><code>tabindex</code> 案例一</a>，了解导航顺序</li>
-							<li>参考 <a href="Demo_tabindex_2.html"><code>tabindex</code> 案例二</a>，了解导航焦点</li>
-						</ul>
-					</section><!-- slides for tabindex -->
+<!-- slides for tabindex -->
 					
 					<section>
 						<h3>accesskey</h3>
@@ -396,39 +380,7 @@
 						</pre>
 					</section> <!-- 合并label元素与文本标签 -->
 					
-					<section>
-						<h2>必填域的处理</h2>					
-						<form name="form1" method="post" action="">
-  <p>
-    <label for="name">姓名</label>
-    <input type="text" name="name" id="name" required>
-  </p>
-  <p>
-    <input type="checkbox" name="tos" id="tos" required>
-    <label for="tos" >我同意</label>
-  </p>
-  <p>
-    <input type="submit" name="submit" id="submit" value="测试">
-  </p>
-</form>			
-							<pre>
-							<code>
-<form name="form1" method="post" action="">
-  <p>
-    <label for="name">姓名 <span color=red>*</span></label>
-    <input type="text" name="name" id="name" required>
-  </p>
-  <p>
-    <input type="checkbox" name="tos" id="tos" required>
-    <label for="tos" ><span class="star">*</span>我同意</label>
-  </p>
-  <p>
-    <input type="submit" name="submit" id="submit" value="测试">
-  </p>
-</form>					
-							</code>
-							</pre>						
-					</section><!-- 必填域的处理 -->	
+
 				
 				</section> <!-- slides 2 -->	
 				
@@ -453,29 +405,7 @@
 							</p>
 							</form>
 					</section>
-					
-					<section>
-
-					</section>
-					
-				</section>
-					
-
-				
-				
-
-				
-				
-				
-				
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			
-			
-			
-			
-			
-			
+								
 			</div>
 		</div>
 
