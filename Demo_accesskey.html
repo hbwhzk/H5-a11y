@@ -8,7 +8,44 @@
 
 <body>
 	<h3>重点：Accesskey</h3>
-	<a href="https://www.w3.org/" accesskey="z">Alt + Z，快速访问此链接</a>
-	<p>注意：accesskey仅支持edge，IE仅能快速导航到焦点，需配合Enter使用，Chrome和FF不支持</p>		
+	<a href="https://www.w3.org/" accesskey="z 3">Alt + Z，快速访问此链接</a>
+	<br/>					
+	<hr/>
+	<table class="standard-table">
+	 <tbody>
+	  <tr>
+	   <th>&nbsp;</th>
+	   <th>Windows</th>
+	   <th>Linux</th>
+	   <th>Mac</th>
+	  </tr>
+	  <tr>
+	   <th>Firefox</th>
+	   <td style="text-align: center;" colspan="2" rowspan="1"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
+	   <td>On Firefox 14 or newer, <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd><br>
+		On Firefox 13 or older, <kbd>Control</kbd> + <kbd><em>key</em></kbd></td>
+	  </tr>
+	  <tr>
+	   <th>Internet Explorer</th>
+	   <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+	   <td colspan="2" rowspan="1">N/A</td>
+	  </tr>
+	  <tr>
+	   <th>Google Chrome</th>
+	   <td style="text-align: center;" colspan="2" rowspan="1"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
+	   <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+	  </tr>
+	  <tr>
+	   <th>Safari</th>
+	   <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+	   <td>N/A</td>
+	   <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+	  </tr>
+	  <tr>
+	   <th>Opera</th>
+	   <td colspan="3" rowspan="1"><kbd>Shift</kbd> + <kbd>Esc</kbd> opens a contents list which are accessible by accesskey, then, can choose an item by pressing <kbd><em>key</em></kbd></td>
+	  </tr>
+	 </tbody>
+	</table>		
 </body>
 </html>
